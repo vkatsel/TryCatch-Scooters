@@ -85,3 +85,8 @@ CREATE TABLE Active_subscriptions (
     FOREIGN KEY (subscription_type_id) REFERENCES Subscriptions(subscription_type_id)
 );
 
+CREATE USER 'dzhupanenko'@'localhost' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON trycatch_scooters TO 'dzhupanenko'@'localhost' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+
+
