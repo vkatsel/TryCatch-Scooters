@@ -89,4 +89,16 @@ CREATE USER 'dzhupanenko'@'localhost' IDENTIFIED BY '1234';
 GRANT ALL PRIVILEGES ON trycatch_scooters TO 'dzhupanenko'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
+CREATE INDEX idx_start_time ON Trips(start_time);
+CREATE INDEX idx_scooter_id ON Trips(scooter_id);
 
+
+CREATE USER 'readonly_user'@'localhost' IDENTIFIED BY 'readonly123';
+GRANT SELECT ON TryCatch_Scooters.* TO 'readonly_user'@'localhost';
+FLUSH PRIVILEGES;
+
+CREATE USER 'maintenance_admin'@'localhost' IDENTIFIED BY 'maint123';
+GRANT SELECT, UPDATE, INSERT ON TryCatch_Scooters.Scooters TO 'maintenance_admin'@'localhost';
+GRANT SELECT, UPDATE, INSERT ON TryCatch_Scooters.Tickets TO 'maintenance_admin'@'localhost';
+GRANT SELECT ON TryCatch_Scooters.Trips TO 'maintenance_admin'@'localhost';
+FLUSH PRIVILEGES;
