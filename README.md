@@ -38,15 +38,15 @@
 - **readonly_user** — тільки читати таблиці
 
 ## Файли в проєкті
-TryCatch-Scooters/
-├── data_base_initialization.sql # створення таблиць
-├── coments.sql # коментарі до колонок
-├── stored_procedure.sql # процедура генерації trips
-├── trips.insert_500k.sql # виклик процедури
-├── trigger.sql # тригер для обслуговування
-├── view.sql # view для статистики
-├── ERD.png # ER-діаграма
-└── README.md # цей опис
+TryCatch-Scooters/ \
+├── data_base_initialization.sql # створення таблиць\
+├── coments.sql # коментарі до колонок\
+├── stored_procedure.sql # процедура генерації trips\
+├── trips.insert_500k.sql # виклик процедури\
+├── trigger.sql # тригер для обслуговування\
+├── view.sql # view для статистики\
+├── ERD.png # ER-діаграма\
+└── README.md # цей опис\
 
 
 ## Демодані
